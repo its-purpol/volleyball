@@ -1,0 +1,233 @@
+.group {
+    width: 922px;
+    height: 66px;
+}
+
+.group .navbar {
+    position: relative;
+    width: 926px;
+    height: 66px;
+    left: -2px;
+}
+
+.group .rectangle {
+    width: 304px;
+    left: 0;
+    background-color: var(--bleu-viennois);
+    position: absolute;
+    height: 66px;
+    top: 0;
+    border: 4px solid;
+    border-color: #ffffff;
+}
+
+.group .div {
+    width: 66px;
+    left: 300px;
+    background-color: var(--bleu-viennois);
+    position: absolute;
+    height: 66px;
+    top: 0;
+    border: 4px solid;
+    border-color: #ffffff;
+}
+
+.group .rectangle-2 {
+    width: 72px;
+    left: 362px;
+    background-color: var(--turquoise-viennois);
+    position: absolute;
+    height: 66px;
+    top: 0;
+    border: 4px solid;
+    border-color: #ffffff;
+}
+
+.group .rectangle-3 {
+    width: 304px;
+    left: 622px;
+    background-color: var(--bleu-viennois);
+    transform: rotate(180deg);
+    position: absolute;
+    height: 66px;
+    top: 0;
+    border: 4px solid;
+    border-color: #ffffff;
+}
+
+.group .rectangle-4 {
+    width: 66px;
+    left: 560px;
+    background-color: var(--bleu-viennois);
+    transform: rotate(180deg);
+    position: absolute;
+    height: 66px;
+    top: 0;
+    border: 4px solid;
+    border-color: #ffffff;
+}
+
+.group .rectangle-5 {
+    width: 72px;
+    left: 492px;
+    background-color: var(--turquoise-viennois);
+    transform: rotate(180deg);
+    position: absolute;
+    height: 66px;
+    top: 0;
+    border: 4px solid;
+    border-color: #ffffff;
+}
+
+.group .text-wrapper {
+    width: 68px;
+    height: 32px;
+    top: 16px;
+    left: 364px;
+    font-size: 28px;
+    text-align: center;
+    position: absolute;
+    font-family: "Krona One", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.group .text-wrapper-2 {
+    width: 44px;
+    height: 32px;
+    top: 23px;
+    left: 311px;
+    font-size: 32px;
+    text-align: center;
+    position: absolute;
+    font-family: "Krona One", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.group .text-wrapper-3 {
+    position: absolute;
+    width: 68px;
+    height: 32px;
+    top: 16px;
+    left: 494px;
+    font-family: "Krona One", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.group .text-wrapper-4 {
+    width: 51px;
+    height: 10px;
+    top: 12px;
+    left: 307px;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    font-family: "Krona One", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.group .text-wrapper-5 {
+    position: absolute;
+    width: 44px;
+    height: 32px;
+    top: 23px;
+    left: 571px;
+    font-family: "Krona One", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.group .text-wrapper-6 {
+    position: absolute;
+    width: 51px;
+    height: 10px;
+    top: 12px;
+    left: 567px;
+    font-family: "Krona One", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.group .mask-group {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    top: 2px;
+    left: 432px;
+}
+
+.group .rectangle-stroke {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    top: 0;
+    left: 430px;
+}
+
+.group .text-wrapper-7 {
+    width: 233px;
+    height: 32px;
+    top: 16px;
+    left: 58px;
+    font-size: 28px;
+    text-align: right;
+    position: absolute;
+    font-family: "Krona One", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.group .ellipse {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 18px;
+    left: 19px;
+    background-color: var(--jaune-viennois);
+    border-radius: 15px;
+}
+
+.group .text-wrapper-8 {
+    position: absolute;
+    width: 233px;
+    height: 32px;
+    top: 16px;
+    left: 635px;
+    font-family: "Krona One", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}

@@ -23,3 +23,11 @@ function changerService() {
     }
     VienneSert = !VienneSert;
 }
+
+/*
+    Controle externe
+*/
+
+window.addEventListener("message", (event) => {
+    console.log("Message received:", event.data);
+});

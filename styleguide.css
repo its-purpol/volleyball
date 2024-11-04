@@ -2,4 +2,13 @@
     --bleu-viennois: rgba(26, 63, 153, 1);
     --jaune-viennois: rgba(248, 205, 15, 1);
     --turquoise-viennois: rgba(83, 171, 241, 1);
+    --marin-elite: rgba(0, 39, 94, 1);
+    --bleu-victorieux: rgba(1, 175, 236, 1);
+}
+
+html,
+body {
+    margin: 10px;
+    margin-left: 27px;
+    height: 100%;
 }

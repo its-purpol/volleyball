@@ -1,122 +1,123 @@
-.group {
+.logo {
     width: 922px;
     height: 66px;
 }
 
-.group .navbar {
+.logo .overlap-group {
     position: relative;
-    width: 926px;
-    height: 66px;
-    left: -2px;
+    width: 1051px;
+    height: 125px;
+    top: -24px;
+    left: -55px;
 }
 
-.group .rectangle {
+#rectangle {
     width: 304px;
-    left: 0;
+    left: 53px;
     background-color: var(--bleu-viennois);
     position: absolute;
     height: 66px;
-    top: 0;
+    top: 24px;
     border: 4px solid;
     border-color: #ffffff;
 }
 
-.group .div {
+#div {
     width: 66px;
-    left: 300px;
+    left: 353px;
+    background-color: var(--bleu-victorieux);
+    position: absolute;
+    height: 66px;
+    top: 24px;
+    border: 4px solid;
+    border-color: #ffffff;
+}
+
+#rectangle-2 {
+    width: 118px;
+    left: 415px;
     background-color: var(--bleu-viennois);
     position: absolute;
     height: 66px;
-    top: 0;
+    top: 24px;
     border: 4px solid;
     border-color: #ffffff;
 }
 
-.group .rectangle-2 {
-    width: 72px;
-    left: 362px;
-    background-color: var(--turquoise-viennois);
-    position: absolute;
-    height: 66px;
-    top: 0;
-    border: 4px solid;
-    border-color: #ffffff;
-}
-
-.group .rectangle-3 {
+#rectangle-3 {
     width: 304px;
-    left: 622px;
+    left: 703px;
     background-color: var(--bleu-viennois);
     transform: rotate(180deg);
     position: absolute;
     height: 66px;
-    top: 0;
+    top: 24px;
     border: 4px solid;
     border-color: #ffffff;
 }
 
-.group .rectangle-4 {
+#rectangle-4 {
     width: 66px;
-    left: 560px;
+    left: 641px;
+    background-color: var(--bleu-victorieux);
+    transform: rotate(180deg);
+    position: absolute;
+    height: 66px;
+    top: 24px;
+    border: 4px solid;
+    border-color: #ffffff;
+}
+
+#rectangle-5 {
+    width: 116px;
+    left: 529px;
     background-color: var(--bleu-viennois);
     transform: rotate(180deg);
     position: absolute;
     height: 66px;
-    top: 0;
+    top: 24px;
     border: 4px solid;
     border-color: #ffffff;
 }
 
-.group .rectangle-5 {
-    width: 72px;
-    left: 492px;
-    background-color: var(--turquoise-viennois);
-    transform: rotate(180deg);
+#score-l-num {
+    left: 417px;
     position: absolute;
-    height: 66px;
-    top: 0;
-    border: 4px solid;
-    border-color: #ffffff;
-}
-
-.group .text-wrapper {
     width: 68px;
     height: 32px;
-    top: 16px;
+    top: 40px;
+    font-family: "Krona One", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+#text-wrapper-2 {
     left: 364px;
-    font-size: 28px;
-    text-align: center;
     position: absolute;
-    font-family: "Krona One", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-}
-
-.group .text-wrapper-2 {
     width: 44px;
     height: 32px;
-    top: 23px;
-    left: 311px;
-    font-size: 32px;
-    text-align: center;
-    position: absolute;
+    top: 47px;
     font-family: "Krona One", Helvetica;
     font-weight: 400;
     color: #ffffff;
+    font-size: 32px;
+    text-align: center;
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
 }
 
-.group .text-wrapper-3 {
+#score-r-num {
+    left: 575px;
     position: absolute;
     width: 68px;
     height: 32px;
-    top: 16px;
-    left: 494px;
+    top: 40px;
     font-family: "Krona One", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -127,28 +128,28 @@
     white-space: nowrap;
 }
 
-.group .text-wrapper-4 {
+#set-label-l {
+    left: 360px;
+    position: absolute;
     width: 51px;
     height: 10px;
-    top: 12px;
-    left: 307px;
-    font-size: 12px;
-    text-align: center;
-    position: absolute;
+    top: 36px;
     font-family: "Krona One", Helvetica;
     font-weight: 400;
     color: #ffffff;
+    font-size: 12px;
+    text-align: center;
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
 }
 
-.group .text-wrapper-5 {
+#text-wrapper-5 {
+    left: 652px;
     position: absolute;
     width: 44px;
     height: 32px;
-    top: 23px;
-    left: 571px;
+    top: 47px;
     font-family: "Krona One", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -159,12 +160,12 @@
     white-space: nowrap;
 }
 
-.group .text-wrapper-6 {
+#set-label-r {
+    left: 648px;
     position: absolute;
     width: 51px;
     height: 10px;
-    top: 12px;
-    left: 567px;
+    top: 36px;
     font-family: "Krona One", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -175,59 +176,77 @@
     white-space: nowrap;
 }
 
-.group .mask-group {
+#team-l-name {
     position: absolute;
-    width: 62px;
-    height: 62px;
-    top: 2px;
-    left: 432px;
-}
-
-.group .rectangle-stroke {
-    position: absolute;
-    width: 66px;
-    height: 66px;
-    top: 0;
-    left: 430px;
-}
-
-.group .text-wrapper-7 {
     width: 233px;
     height: 32px;
-    top: 16px;
-    left: 58px;
-    font-size: 28px;
-    text-align: right;
-    position: absolute;
+    top: 40px;
+    left: 111px;
     font-family: "Krona One", Helvetica;
     font-weight: 400;
     color: #ffffff;
+    font-size: 28px;
+    text-align: center;
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
 }
 
-.group .ellipse {
+#service {
     position: absolute;
     width: 30px;
     height: 30px;
-    top: 18px;
-    left: 19px;
+    top: 42px;
+    left: 312px;
     background-color: var(--jaune-viennois);
     border-radius: 15px;
 }
 
-.group .text-wrapper-8 {
+#team-r-name {
     position: absolute;
     width: 233px;
     height: 32px;
-    top: 16px;
-    left: 635px;
+    top: 40px;
+    left: 716px;
     font-family: "Krona One", Helvetica;
     font-weight: 400;
     color: #ffffff;
     font-size: 28px;
+    text-align: center;
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
+}
+
+.image {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: 2px;
+    left: 0;
+}
+
+.image-traced {
+    position: absolute;
+    width: 95px;
+    height: 117px;
+    top: 0;
+    left: 956px;
+}
+
+.img {
+    position: absolute;
+    width: 90px;
+    height: 107px;
+    top: 4px;
+    left: 960px;
+    object-fit: cover;
+}
+
+.vector {
+    position: absolute;
+    width: 100px;
+    height: 118px;
+    top: 7px;
+    left: 480px;
 }

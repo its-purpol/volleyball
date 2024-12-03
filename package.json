@@ -1,10 +1,18 @@
 {
   "name": "volleyball",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This project is meant to help Canal Vienne build an identity for the volleyball team of Vienne. Canal Vienne is broadcasting their games and was willing to improve the design of the scoreboard.",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "fs": "^0.0.1-security",
+    "ws": "^8.18.0"
+  },
+  "author": "",
+  "license": "ISC"
 }

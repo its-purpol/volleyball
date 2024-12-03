@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr-fr">
 <head>
-    <title>scoreboard</title>
+    <title>Affichage des Scores</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,21 +15,65 @@
         <div id="rectangle-3"></div>
         <div id="rectangle-4"></div>
         <div id="rectangle-5"></div>
-        <div id="score-l-num">24</div>
-        <div id="text-wrapper-2">o</div>
-        <div id="score-r-num">20</div>
+        <div id="score-l-num">0</div>
+        <div id="set-l-num">0</div>
+        <div id="score-r-num">0</div>
         <div id="set-label-l">SETS</div>
-        <div id="text-wrapper-5">o</div>
+        <div id="set-r-num">0</div>
         <div id="set-label-r">SETS</div>
         <div id="team-l-name">VIENNE</div>
-        <div id="team-r-name">ST-DIÉ</div>
-        <img class="image" src="https://c.animaapp.com/jJxWTXO9/img/image-6@2x.png" />
-        <img class="image-traced" src="https://c.animaapp.com/jJxWTXO9/img/image-5--traced-.svg" />
-        <img class="img" src="https://c.animaapp.com/jJxWTXO9/img/image-7@2x.png" />
-        <img class="vector" src="https://c.animaapp.com/jJxWTXO9/img/vector@2x.png" />
+        <div id="team-r-name">NANTES</div>
+        <img id="image-l" src="img/vienne.png" />
+        <img id="image-r" src="img/nantes.png" />
+        <img class="vector" src="img/ligue.png" />
         <div id="service"></div>
     </div>
 </div>
 </body>
-<script src="index.js"></script>
+<script>
+    fetch(`http://192.168.1.182:8080/data.json?timestamp=${Date.now()}`)
+        .then(response => response.json())
+        .then(data => {
+            let serviceEl = document.getElementById('service');
+            if (data.service) {
+                serviceEl.style.left = "312px";
+            }
+            else {
+                serviceEl.style.left = "718px";
+            }
+            document.getElementById('score-l-num').textContent = data.vienne.score;
+            document.getElementById('set-l-num').textContent = data.vienne.set;
+
+            document.getElementById('score-r-num').textContent = data.visiteurs.score;
+            document.getElementById('set-r-num').textContent = data.visiteurs.set;
+            document.getElementById('team-r-name').textContent = data.visiteurs.nom;
+            document.getElementById('image-r').src = data.visiteurs.embleme;
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+
+    const ws = new WebSocket('ws://192.168.1.182:8081');
+
+    ws.onmessage = async (event) => {
+        console.log('Message received:', event.data);
+        fetch(`http://192.168.1.182:8080/data.json?timestamp=${Date.now()}`)
+            .then(response => response.json())
+            .then(data => {
+                let serviceEl = document.getElementById('service');
+                if (data.service) {
+                    serviceEl.style.left = "312px";
+                }
+                else {
+                    serviceEl.style.left = "718px";
+                }
+                document.getElementById('score-l-num').textContent = data.vienne.score;
+                document.getElementById('set-l-num').textContent = data.vienne.set;
+
+                document.getElementById('score-r-num').textContent = data.visiteurs.score;
+                document.getElementById('set-r-num').textContent = data.visiteurs.set;
+                document.getElementById('team-r-name').textContent = data.visiteurs.nom;
+                document.getElementById('image-r').src = data.visiteurs.embleme;
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+    };
+</script>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Controle</title>
+    <link rel="stylesheet" href="controle.css">
+</head>
+
+<body>
+    <div class="container-all">
+        <div class="score">
+            <h1>Gestion des scores</h1>
+            <div class="container-scores">
+                <button onclick="changerService()">Changer Service</button>
+                <div class="vienne">
+                    <h2>Vienne</h2>
+                    <button onclick="changerScore('vienne', 1)">Points +1</button>
+                    <button onclick="changerScore('vienne', -1)">Points -1</button>
+                    <button onclick="definirScore('vienne')">Reset Points</button>
+                    <br><br>
+                    <button onclick="changerSet('vienne', 1)">Sets +1</button>
+                    <button onclick="changerSet('vienne', -1)">Sets -1</button>
+                    <button onclick="definirSet('vienne')">Reset Sets</button>
+                </div>
+                <div class="visiteurs">
+                    <h2>Visiteurs</h2>
+                    <button onclick="changerScore('visiteurs', 1)">Points +1</button>
+                    <button onclick="changerScore('visiteurs', -1)">Points -1</button>
+                    <button onclick="definirScore('visiteurs')">Reset Points</button>
+                    <br><br>
+                    <button onclick="changerSet('visiteurs', 1)">Sets +1</button>
+                    <button onclick="changerSet('visiteurs', -1)">Sets -1</button>
+                    <button onclick="definirSet('visiteurs')">Reset Sets</button>
+                    <br><br>
+                    <input type="text" placeholder="Entrer nom visiteurs" id="adversaire">
+                    <button onclick="definirAdversaire()">Changer Nom</button>
+                    <br><br>
+                    <input type="file" id="embleme" accept="image/*">
+                    <button onclick="definirEmbleme()">Changer Embleme</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./controle.js"></script>
+<script>
+    const ws = new WebSocket('ws://192.168.1.182:8081');
+
+    function sendMessage(message) {
+        if (ws.readyState === WebSocket.OPEN) {
+            ws.send(message);
+        } else {
+            console.error('WebSocket is not open');
+        }
+    }
+</script>
+
+</html>

@@ -4,16 +4,22 @@
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
 }
-html,
-body {
-    margin: 0px;
-    height: 100%;
-}
-/* a blue color as a generic focus style */
-button:focus-visible {
-    outline: 2px solid #4a90e2 !important;
-    outline: -webkit-focus-ring-color auto 5px !important;
-}
+
 a {
     text-decoration: none;
+}
+
+:root {
+    --bleu-viennois: rgba(26, 63, 153, 1);
+    --jaune-viennois: rgba(248, 205, 15, 1);
+    --turquoise-viennois: rgba(83, 171, 241, 1);
+    --marin-elite: rgba(0, 39, 94, 1);
+    --bleu-victorieux: rgba(1, 175, 236, 1);
+}
+
+html,
+body {
+    margin: 10px;
+    margin-left: 27px;
+    height: 100%;
 }

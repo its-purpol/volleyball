@@ -1,1 +1,0 @@
-const newWindow = window.open("index.html");

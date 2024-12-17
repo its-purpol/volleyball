@@ -1,11 +1,15 @@
+import config from './config.js';
+
+const ws = new WebSocket(`${config.wsHost}`);
+
 let jsonData = {}
 
-fetch('http://192.168.1.182:8080/data.json')
-.then(response => response.json())
-.then(data => {
-    jsonData = data;
-})
-.catch(error => console.error('Error loading JSON:', error));
+fetch(`${config.host}/data.json?timestamp=${Date.now()}`)
+    .then(response => response.json())
+    .then(data => {
+        jsonData = data;
+    })
+    .catch(error => console.error('Error loading JSON:', error));
 
 /*
     Functions
@@ -83,3 +87,12 @@ function definirEmbleme() {
 function sendUpdatedData() {
     ws.send(`update-json|${JSON.stringify(jsonData)}`);
 }
+
+window.ws = ws;
+window.changerScore = changerScore;
+window.changerSet = changerSet;
+window.definirScore = definirScore;
+window.definirSet = definirSet;
+window.definirAdversaire = definirAdversaire;
+window.changerService = changerService;
+window.definirEmbleme = definirEmbleme;

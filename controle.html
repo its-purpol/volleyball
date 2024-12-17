@@ -44,17 +44,7 @@
         </div>
     </div>
 </body>
-<script src="./controle.js"></script>
-<script>
-    const ws = new WebSocket('ws://192.168.1.182:8081');
-
-    function sendMessage(message) {
-        if (ws.readyState === WebSocket.OPEN) {
-            ws.send(message);
-        } else {
-            console.error('WebSocket is not open');
-        }
-    }
-</script>
+<script src="./config.js" type="module"></script>
+<script src="./controle.js" type="module"></script>
 
 </html>

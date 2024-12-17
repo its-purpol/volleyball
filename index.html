@@ -30,8 +30,10 @@
     </div>
 </div>
 </body>
-<script>
-    fetch(`http://192.168.1.182:8080/data.json?timestamp=${Date.now()}`)
+<script type="module">
+    import config from './config.js';
+
+    fetch(`${config.host}/data.json?timestamp=${Date.now()}`)
         .then(response => response.json())
         .then(data => {
             let serviceEl = document.getElementById('service');
@@ -51,11 +53,11 @@
         })
         .catch(error => console.error('Error loading JSON:', error));
 
-    const ws = new WebSocket('ws://192.168.1.182:8081');
+    const ws = new WebSocket(`${config.wsHost}`);
 
     ws.onmessage = async (event) => {
         console.log('Message received:', event.data);
-        fetch(`http://192.168.1.182:8080/data.json?timestamp=${Date.now()}`)
+        fetch(`${config.host}/data.json?timestamp=${Date.now()}`)
             .then(response => response.json())
             .then(data => {
                 let serviceEl = document.getElementById('service');

@@ -3,10 +3,31 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
+
+// Function to detect the server's local IP address
+function getLocalIP() {
+    const interfaces = os.networkInterfaces();
+    for (const name of Object.keys(interfaces)) {
+        for (const iface of interfaces[name]) {
+            if (iface.family === 'IPv4' && !iface.internal) {
+                return iface.address; // Return the first IPv4 non-internal address
+            }
+        }
+    }
+    return 'localhost'; // Fallback to localhost
+}
+
+// Write the IP address to config.js
+const localIP = getLocalIP();
+const configPath = path.join(__dirname, 'config.js');
+fs.writeFileSync(configPath, `const config = { host: 'http://${localIP}:8080', wsHost: 'ws://${localIP}:8081' }; export default config;`);
+
+console.log(`Local IP detected: ${localIP}`);
+console.log(`Configuration file updated at ${configPath}`);
 
 // Initialize Express server
 const app = express();
-const PORT = 8081; // Unified port for both WebSocket and Express
 
 app.use(express.static(path.join(__dirname), {
     etag: false, // Disable ETag headers
@@ -50,8 +71,8 @@ app.post('/data.json', (req, res) => {
 });
 
 // Start Express server and integrate WebSocket server
-const server = app.listen(PORT, () => {
-    console.log(`Serveur Express et WebSocket démarré sur http://localhost:${PORT}`);
+const server = app.listen(8081, () => {
+    console.log(`Serveur Express et WebSocket démarré sur http://${localIP}:8081`);
 });
 
 // Initialize WebSocket server

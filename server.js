@@ -5,9 +5,21 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
+const og_data = path.join(__dirname, 'data-original.json')
+const new_data = path.join(__dirname, 'data.json')
+
+fs.copyFile(og_data, new_data, (err) => {
+    if (err) {
+        console.error('Error while duplicating the file.', err);
+    } else {
+        console.log('data.json successfully created.')
+    }
+})
+
 // Function to detect the server's local IP address
 function getLocalIP() {
     const interfaces = os.networkInterfaces();
+    console.log(interfaces)
     for (const name of Object.keys(interfaces)) {
         for (const iface of interfaces[name]) {
             if (iface.family === 'IPv4' && !iface.internal) {

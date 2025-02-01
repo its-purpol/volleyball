@@ -4,7 +4,7 @@ const ws = new WebSocket(`${config.wsHost}`);
 
 let jsonData = {}
 
-fetch(`${config.host}/data.json?timestamp=${Date.now()}`)
+fetch(`${config.host}/data.json`)
     .then(response => response.json())
     .then(data => {
         jsonData = data;

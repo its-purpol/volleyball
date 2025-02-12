@@ -57,16 +57,6 @@ function definirAdversaire(equipe) {
     sendUpdatedData()
 }
 
-function changerService() {
-    let VienneSert = jsonData.service
-    if (VienneSert) {
-        jsonData.service = false;
-    } else {
-        jsonData.service = true;
-    }
-    sendUpdatedData()
-}
-
 function definirEmbleme() {
     let emblemeEl = document.getElementById('embleme');
 
@@ -94,5 +84,4 @@ window.changerSet = changerSet;
 window.definirScore = definirScore;
 window.definirSet = definirSet;
 window.definirAdversaire = definirAdversaire;
-window.changerService = changerService;
 window.definirEmbleme = definirEmbleme;

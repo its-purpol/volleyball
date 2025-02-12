@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Krona+One:400");
+
+* {
+    font-family: "Krona One", monospace;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row, .col {
+    display: flex;
+    background-color: #00275E;
+    color: #FFFFFF;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    background-color: #01AFEC;
+    color: #FFFFFF;
+    font-size: 27px;
+}
+
+.small {
+    width: 20%;
+}
+
+.long {
+    width: 50%;
+    font-size: 20px;
+}
+
+input {
+    width: 80%;
+}
+
+button {
+    height: 35px;
+    background-color: #F8CD0F;
+    color: #00275E;
+}
+
+h2 {
+    font-size: 24px;
+}

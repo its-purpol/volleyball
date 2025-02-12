@@ -11,34 +11,47 @@
 <body>
     <div class="container-all">
         <div class="score">
-            <h1>Gestion des scores</h1>
+            <h2>Gestion des scores</h2>
             <div class="container-scores">
-                <button onclick="changerService()">Changer Service</button>
-                <div class="vienne">
-                    <h2>Vienne</h2>
-                    <button onclick="changerScore('vienne', 1)">Points +1</button>
-                    <button onclick="changerScore('vienne', -1)">Points -1</button>
-                    <button onclick="definirScore('vienne')">Reset Points</button>
-                    <br><br>
-                    <button onclick="changerSet('vienne', 1)">Sets +1</button>
-                    <button onclick="changerSet('vienne', -1)">Sets -1</button>
-                    <button onclick="definirSet('vienne')">Reset Sets</button>
+                <div class="col">
+                    <h2>Points</h2>
+                    <div class="row">
+                        <button class="vienne, square" onclick="changerScore('vienne', 1)">+1</button>
+                        <button class="vienne, square" onclick="changerScore('vienne', -1)">-1</button>
+                        <button class="visiteurs, square" onclick="changerScore('visiteurs', 1)">+1</button>
+                        <button class="visiteurs, square" onclick="changerScore('visiteurs', -1)">-1</button>
+                    </div>
+                    <div class="row">
+                        <button class="vienne, long" onclick="definirScore('vienne')">Reset</button>
+                        <button class="visiteurs, long" onclick="definirScore('visiteurs')">Reset</button>
+                    </div>
                 </div>
-                <div class="visiteurs">
-                    <h2>Visiteurs</h2>
-                    <button onclick="changerScore('visiteurs', 1)">Points +1</button>
-                    <button onclick="changerScore('visiteurs', -1)">Points -1</button>
-                    <button onclick="definirScore('visiteurs')">Reset Points</button>
-                    <br><br>
-                    <button onclick="changerSet('visiteurs', 1)">Sets +1</button>
-                    <button onclick="changerSet('visiteurs', -1)">Sets -1</button>
-                    <button onclick="definirSet('visiteurs')">Reset Sets</button>
-                    <br><br>
-                    <input type="text" placeholder="Entrer nom visiteurs" id="adversaire">
-                    <button onclick="definirAdversaire()">Changer Nom</button>
-                    <br><br>
-                    <input type="file" id="embleme" accept="image/*">
-                    <button onclick="definirEmbleme()">Changer Embleme</button>
+                <br><br>
+                <div class="col">
+                    <h2>Sets</h2>
+                    <div class="row">
+                        <button class="vienne, square" onclick="changerSet('vienne', 1)">+1</button>
+                        <button class="vienne, square" onclick="changerSet('vienne', -1)">-1</button>
+                        <button class="visiteurs, square" onclick="changerSet('visiteurs', 1)">+1</button>
+                        <button class="visiteurs, square" onclick="changerSet('visiteurs', -1)">-1</button>
+                    </div>
+                    <div class="row">
+                        <button class="vienne, long" onclick="definirSet('vienne')">Reset</button>
+                        <button class="visiteurs, long" onclick="definirSet('visiteurs')">Reset</button>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col">
+                    <h2>Paramètres Visiteurs</h2>
+                    <div class="row">
+                        <input type="text" placeholder="Entrer nom visiteurs" id="adversaire">
+                        <button class="small" onclick="definirAdversaire()">OK</button>
+                    </div>
+                    <div>
+                        <label class="long" for="embleme">Choisir Image</label>
+                        <input type="file" id="embleme" accept="image/*" style="opacity: 0">
+                    </div>
+                    <button onclick="definirEmbleme()">A supprimer</button>
                 </div>
             </div>
         </div>

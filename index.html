@@ -26,7 +26,6 @@
         <img id="image-l" src="img/vienne.png" />
         <img id="image-r" src="img/nantes.png" />
         <img class="vector" src="img/ligue.png" />
-        <div id="service"></div>
     </div>
 </div>
 </body>
@@ -36,13 +35,6 @@
     fetch(`${config.host}/data.json?timestamp=${Date.now()}`)
         .then(response => response.json())
         .then(data => {
-            let serviceEl = document.getElementById('service');
-            if (data.service) {
-                serviceEl.style.left = "312px";
-            }
-            else {
-                serviceEl.style.left = "718px";
-            }
             document.getElementById('score-l-num').textContent = data.vienne.score;
             document.getElementById('set-l-num').textContent = data.vienne.set;
 
@@ -60,13 +52,6 @@
         fetch(`${config.host}/data.json?timestamp=${Date.now()}`)
             .then(response => response.json())
             .then(data => {
-                let serviceEl = document.getElementById('service');
-                if (data.service) {
-                    serviceEl.style.left = "312px";
-                }
-                else {
-                    serviceEl.style.left = "718px";
-                }
                 document.getElementById('score-l-num').textContent = data.vienne.score;
                 document.getElementById('set-l-num').textContent = data.vienne.set;
 

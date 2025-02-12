@@ -192,10 +192,6 @@
     white-space: nowrap;
 }
 
-#service {
-    display: none;
-}
-
 #team-r-name {
     position: absolute;
     width: 233px;

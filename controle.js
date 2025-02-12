@@ -68,6 +68,10 @@ function definirEmbleme() {
             if (emblemeEl.value) {
                 jsonData.visiteurs.embleme = `${base64String}`;
                 sendUpdatedData()
+                let advButtons = document.getElementsByClassName("visiteurs")
+                for (let i = 0; i < advButtons.length; i++) {
+                    advButtons[i].src = `${base64String}`
+                }
             }
         }
         reader.readAsDataURL(file);

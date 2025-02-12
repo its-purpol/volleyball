@@ -5,53 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Controle</title>
-    <link rel="stylesheet" href="controle.css">
+    <link rel="stylesheet" href="./controle.css">
 </head>
 
 <body>
     <div class="container-all">
         <div class="score">
-            <h2>Gestion des scores</h2>
+            <h1>Gestion des scores</h1>
             <div class="container-scores">
                 <div class="col">
                     <h2>Points</h2>
                     <div class="row">
-                        <button class="vienne, square" onclick="changerScore('vienne', 1)">+1</button>
-                        <button class="vienne, square" onclick="changerScore('vienne', -1)">-1</button>
-                        <button class="visiteurs, square" onclick="changerScore('visiteurs', 1)">+1</button>
-                        <button class="visiteurs, square" onclick="changerScore('visiteurs', -1)">-1</button>
+                        <div class="square" onclick="changerScore('vienne', 1)">
+                            <img src="./img/vienne.png" alt="">
+                            <p>+1</p>
+                        </div>
+                        <div class="square" onclick="changerScore('vienne', -1)">
+                            <img src="./img/vienne.png" alt="">
+                            <p>-1</p>
+                        </div>
+                        <div class="square" onclick="changerScore('visiteurs', 1)">
+                            <img class="visiteurs" src="./img/nantes.png" alt="">
+                            <p>+1</p>
+                        </div>
+                        <div class="square" onclick="changerScore('visiteurs', -1)">
+                            <img class="visiteurs" src="./img/nantes.png" alt="">
+                            <p>-1</p>
+                        </div>
                     </div>
                     <div class="row">
-                        <button class="vienne, long" onclick="definirScore('vienne')">Reset</button>
-                        <button class="visiteurs, long" onclick="definirScore('visiteurs')">Reset</button>
+                        <button class="long" onclick="definirScore('vienne')">Reset</button>
+                        <button class="long" onclick="definirScore('visiteurs')">Reset</button>
                     </div>
                 </div>
-                <br><br>
                 <div class="col">
                     <h2>Sets</h2>
                     <div class="row">
-                        <button class="vienne, square" onclick="changerSet('vienne', 1)">+1</button>
-                        <button class="vienne, square" onclick="changerSet('vienne', -1)">-1</button>
-                        <button class="visiteurs, square" onclick="changerSet('visiteurs', 1)">+1</button>
-                        <button class="visiteurs, square" onclick="changerSet('visiteurs', -1)">-1</button>
+                        <div class="square" onclick="changerSet('vienne', 1)">
+                            <img src="./img/vienne.png" alt="">
+                            <p>+1</p>
+                        </div>
+                        <div class="square" onclick="changerSet('vienne', -1)">
+                            <img src="./img/vienne.png" alt="">
+                            <p>-1</p>
+                        </div>
+                        <div class="square" onclick="changerSet('visiteurs', 1)">
+                            <img class="visiteurs" src="./img/nantes.png" alt="">
+                            <p>+1</p>
+                        </div>
+                        <div class="square" onclick="changerSet('visiteurs', -1)">
+                            <img class="visiteurs" src="./img/nantes.png" alt="">
+                            <p>-1</p>
+                        </div>
                     </div>
                     <div class="row">
-                        <button class="vienne, long" onclick="definirSet('vienne')">Reset</button>
-                        <button class="visiteurs, long" onclick="definirSet('visiteurs')">Reset</button>
+                        <button class="long" onclick="definirSet('vienne')">Reset</button>
+                        <button class="long" onclick="definirSet('visiteurs')">Reset</button>
                     </div>
                 </div>
-                <br><br>
+                <br>
                 <div class="col">
-                    <h2>Paramètres Visiteurs</h2>
+                    <h3>Paramètres Visiteurs</h3>
                     <div class="row">
-                        <input type="text" placeholder="Entrer nom visiteurs" id="adversaire">
-                        <button class="small" onclick="definirAdversaire()">OK</button>
+                        <input type="text" placeholder="Entrer nom..." id="adversaire">
+                        <button class="small" onclick="definirAdversaire()">Appliquer</button>
                     </div>
-                    <div>
-                        <label class="long" for="embleme">Choisir Image</label>
-                        <input type="file" id="embleme" accept="image/*" style="opacity: 0">
+                    <div class="row">
+                        <label for="embleme">Choisir Image</label>
+                        <input type="file" id="embleme" accept="image/*" style="display: none">
+                        <button class="small" onclick="definirEmbleme()">Appliquer</button>
                     </div>
-                    <button onclick="definirEmbleme()">A supprimer</button>
                 </div>
             </div>
         </div>

@@ -42,15 +42,15 @@
 }
 
 input {
-    width: 65%;
+    width: calc(65% - 8px);
     border: none;
-    padding: 0;
+    padding-left: 8px;
+
 }
 
 ::placeholder {
     color: #A0A0A0;
     font-size: 16px;
-    padding-left: 8px;
 }
 
 button {

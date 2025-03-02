@@ -4,29 +4,25 @@
     <title>Affichage des Scores</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./globals.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styleV.css" />
 </head>
 <body>
-<div class="logo">
-    <div class="overlap-group">
-        <div id="rectangle"></div>
-        <div id="div"></div>
-        <div id="rectangle-2"></div>
-        <div id="rectangle-3"></div>
-        <div id="rectangle-4"></div>
-        <div id="rectangle-5"></div>
-        <div id="score-l-num">0</div>
-        <div id="set-l-num">0</div>
-        <div id="score-r-num">0</div>
-        <div id="set-label-l">SETS</div>
-        <div id="set-r-num">0</div>
-        <div id="set-label-r">SETS</div>
-        <div id="team-l-name">VIENNE</div>
-        <div id="team-r-name">NANTES</div>
-        <img id="image-l" src="./img/vienne.png" alt="VBV logo"/>
-        <img id="image-r" src="./img/nantes.png" alt="Visiteurs logo"/>
-        <img class="ffvb" src="./img/ligue.png" alt="FFVB Elite logo"/>
+<div class="grid">
+    <div class="sets-label">SETS</div>
+    <div class="score-label">SCORE</div>
+    <div class="vienne-label">
+        <img src="./img/vienne.png" alt="VBV logo">
+        VIENNE
     </div>
+    <div class="visiteurs-label">
+        <img id="image-r" src="./img/nantes.png" alt="Visiteurs logo">
+        <span id="team-r-name">NANTES</span>
+    </div>
+    <div class="vienne-sets" id="set-l-num">1</div>
+    <div class="visiteurs-sets" id="set-r-num">0</div>
+    <div class="vienne-score" id="score-l-num">20</div>
+    <div class="visiteurs-score" id="score-r-num">24</div>
+    <div class="ffvb-logo"><img src="./img/big-ligue.png" alt="FFVB Elite logo"></div>
 </div>
 </body>
 <script type="module">

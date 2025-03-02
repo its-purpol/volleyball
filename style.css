@@ -237,10 +237,16 @@
     drop-shadow(0px -5px 0 white)
 }
 
-.vector {
+.ffvb {
     position: absolute;
     width: 100px;
     height: 118px;
     top: 7px;
     left: 480px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 180px 40px 45px 95px;
+    grid-template-rows: 20px 40px 40px;
 }

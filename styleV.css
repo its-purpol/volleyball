@@ -27,9 +27,10 @@
 
 .vienne-label img {
     position: absolute;
-    height: 75px;
-    left: -40px;
-    top: -12px;
+    width: 65px;
+    object-fit: contain;
+    left: -35px;
+    top: -63px;
     z-index: 100;
 }
 

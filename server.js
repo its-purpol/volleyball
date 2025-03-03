@@ -20,14 +20,15 @@ fs.copyFile(og_data, new_data, (err) => {
 function getLocalIP() {
     const interfaces = os.networkInterfaces();
     console.log(interfaces)
+    let ipAddress = 'localhost'
     for (const name of Object.keys(interfaces)) {
         for (const iface of interfaces[name]) {
             if (iface.family === 'IPv4' && !iface.internal) {
-                return iface.address; // Return the first IPv4 non-internal address
+                ipAddress = iface.address; // Return the last IPv4 non-internal address
             }
         }
     }
-    return 'localhost'; // Fallback to localhost
+    return ipAddress; // Fallback to localhost
 }
 
 // Write the IP address to config.js
@@ -94,7 +95,7 @@ wss.on('connection', (ws) => {
     console.log('Client connecté');
 
     ws.on('message', (message) => {
-        console.log(`Message reçu : ${message}`);
+        console.log(`Message reçu`);
         let value = `${message}`;
         if (value.startsWith('update-json|')) {
             const payload = value.replace('update-json|', '');

@@ -20,7 +20,7 @@
             <h1>Gestion des scores</h1>
             <div class="container-scores">
                 <div class="col">
-                    <h2>Points</h2>
+                    <h3>Points</h3>
                     <div class="row">
                         <div class="square" onclick="changerScore('vienne', 1)">
                             <img src="./img/vienne.png" alt="">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <h2>Sets</h2>
+                    <h3>Sets</h3>
                     <div class="row">
                         <div class="square" onclick="changerSet('vienne', 1)">
                             <img src="./img/vienne.png" alt="">
@@ -55,7 +55,7 @@
                             <img src="./img/vienne.png" alt="">
                             <p>-1</p>
                         </div>
-                        <div class="square" onclick="changerSet('visiteurs', 1)">
+                        <div class="square" onclick="tog">
                             <img class="visiteurs" src="./img/nantes.png" alt="">
                             <p>+1</p>
                         </div>
@@ -67,6 +67,13 @@
                     <div class="row">
                         <button class="long" onclick="definirSet('vienne')">Reset</button>
                         <button class="long" onclick="definirSet('visiteurs')">Reset</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Affichage</h3>
+                    <div class="row">
+                        <button class="long" onclick="toggleBalle('set')">Balle de set</button>
+                        <button class="long" onclick="toggleBalle('match')">Balle de match</button>
                     </div>
                 </div>
                 <br>

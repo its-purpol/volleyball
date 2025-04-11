@@ -12,7 +12,7 @@ fetch(`${config.host}/data.json`)
     .catch(error => console.error('Error loading JSON:', error));
 
 /*
-    Functions
+    Fonctions
 */
 
 function changerScore(equipe, valeur) {
@@ -78,6 +78,24 @@ function definirEmbleme() {
     }
 }
 
+function toggleBalle(type) {
+    if (type == 'set') {
+        if (jsonData.balle.set == "none") {
+            jsonData.balle.set = "flex"
+        } else {
+            jsonData.balle.set = "none"
+        }
+        console.log('huh?')
+    } else {
+        if (jsonData.balle.match == "none") {
+            jsonData.balle.match = "flex"
+        } else {
+            jsonData.balle.match = "none"
+        }
+    }
+    sendUpdatedData()
+}
+
 function sendUpdatedData() {
     ws.send(`update-json|${JSON.stringify(jsonData)}`);
 }
@@ -89,3 +107,4 @@ window.definirScore = definirScore;
 window.definirSet = definirSet;
 window.definirAdversaire = definirAdversaire;
 window.definirEmbleme = definirEmbleme;
+window.toggleBalle = toggleBalle;

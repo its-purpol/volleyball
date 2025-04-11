@@ -8,5 +8,9 @@
     "set": 0,
     "nom": "VIENNE",
     "embleme": "/img/vienne.png"
+  },
+  "balle": {
+    "set": "none",
+    "match": "none"
   }
 }

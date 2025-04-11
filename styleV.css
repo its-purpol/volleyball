@@ -1,7 +1,7 @@
 .grid {
     display: grid;
     grid-template-columns: 300px 60px 70px 80px;
-    grid-template-rows: 30px 60px 60px;
+    grid-template-rows: 30px 60px 60px 30px;
     padding-left: 35px;
     background-color: transparent;
     align-content: normal;
@@ -101,6 +101,19 @@
     height: 180px;
     top: 12px;
     right: 1px;
+}
+
+.balle {
+    justify-content: center;
+    grid-area: 4 / 2 / 5 / 4;
+    font-size: 12px;
+    color: black;
+    background-color: var(--jaune-viennois);
+    display: none;
+}
+
+#balle-match {
+    font-size: 10px;
 }
 
 html, body {

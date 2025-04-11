@@ -23,6 +23,8 @@
     <div class="vienne-score" id="score-l-num">20</div>
     <div class="visiteurs-score" id="score-r-num">24</div>
     <div class="ffvb-logo"><img src="./img/big-ligue.png" alt="FFVB Elite logo"></div>
+    <div class="balle" id="balle-match">BALLE DE MATCH</div>
+    <div class="balle" id="balle-set">BALLE DE SET</div>
 </div>
 </body>
 <script type="module">
@@ -55,6 +57,8 @@
                 document.getElementById('set-r-num').textContent = data.visiteurs.set;
                 document.getElementById('team-r-name').textContent = data.visiteurs.nom;
                 document.getElementById('image-r').src = data.visiteurs.embleme;
+                document.getElementById('balle-set').style.display = data.balle.set;
+                document.getElementById('balle-match').style.display = data.balle.match;
             })
             .catch(error => console.error('Error loading JSON:', error));
     };

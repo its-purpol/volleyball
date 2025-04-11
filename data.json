@@ -10,7 +10,7 @@
     "embleme": "/img/vienne.png"
   },
   "balle": {
-    "set": "flex",
+    "set": "none",
     "match": "none"
   }
 }

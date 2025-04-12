@@ -1,16 +1,16 @@
 {
   "vienne": {
     "score": 0,
-    "set": 0
+    "set": 1
   },
   "visiteurs": {
-    "score": 0,
+    "score": 1,
     "set": 0,
     "nom": "VIENNE",
     "embleme": "/img/vienne.png"
   },
   "balle": {
-    "set": "none",
+    "set": "flex",
     "match": "none"
   }
 }

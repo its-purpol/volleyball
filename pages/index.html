@@ -3,8 +3,8 @@
 <head>
     <title>Affichage des Scores</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="./globals.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../style/globals.css" />
+    <link rel="stylesheet" href="../style/style.css" />
 </head>
 <body>
 <div class="logo">
@@ -23,16 +23,16 @@
         <div id="set-label-r">SETS</div>
         <div id="team-l-name">VIENNE</div>
         <div id="team-r-name">NANTES</div>
-        <img id="image-l" src="./img/vienne.png" alt="VBV logo"/>
-        <img id="image-r" src="./img/nantes.png" alt="Visiteurs logo"/>
-        <img class="ffvb" src="./img/ligue.png" alt="FFVB Elite logo"/>
+        <img id="image-l" src="../img/vienne.png" alt="VBV logo"/>
+        <img id="image-r" src="../img/nantes.png" alt="Visiteurs logo"/>
+        <img class="ffvb" src="../img/ligue.png" alt="FFVB Elite logo"/>
     </div>
 </div>
 </body>
 <script type="module">
-    import config from './config.js';
+    import config from '../src/config.js';
 
-    fetch(`${config.host}/data.json?timestamp=${Date.now()}`)
+    fetch(`${config.host}/../data/data.json?timestamp=${Date.now()}`)
         .then(response => response.json())
         .then(data => {
             document.getElementById('score-l-num').textContent = data.vienne.score;
@@ -49,7 +49,7 @@
 
     ws.onmessage = async (event) => {
         console.log('Message received:', event.data);
-        fetch(`${config.host}/data.json?timestamp=${Date.now()}`)
+        fetch(`${config.host}/../data/data.json?timestamp=${Date.now()}`)
             .then(response => response.json())
             .then(data => {
                 document.getElementById('score-l-num').textContent = data.vienne.score;

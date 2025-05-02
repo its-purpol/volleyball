@@ -5,8 +5,8 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
-const og_data = path.join(__dirname, 'data-original.json')
-const new_data = path.join(__dirname, 'data.json')
+const og_data = path.join(__dirname, '../data/data-original.json')
+const new_data = path.join(__dirname, '../data/data.json')
 
 fs.copyFile(og_data, new_data, (err) => {
     if (err) {
@@ -55,7 +55,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname)));
 
 // GET endpoint to serve JSON data
-app.get('/data.json', (req, res) => {
+app.get('../data/data.json', (req, res) => {
     const jsonPath = path.join(__dirname, 'data.json');
     fs.readFile(jsonPath, 'utf8', (err, data) => {
         if (err) {
@@ -68,7 +68,7 @@ app.get('/data.json', (req, res) => {
 });
 
 // POST endpoint to update JSON data
-app.post('/data.json', (req, res) => {
+app.post('../data/data.json', (req, res) => {
     const newData = req.body; // JSON body sent by the client
     const jsonPath = path.join(__dirname, 'data.json');
 

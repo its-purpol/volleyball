@@ -1,1 +1,0 @@
-const config = { host: 'http://192.168.1.9:8080', wsHost: 'ws://192.168.1.9:8081' }; export default config;

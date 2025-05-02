@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="./img/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
-    <link rel="shortcut icon" href="./img/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="../img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Score Volley" />
-    <link rel="manifest" href="./img/site.webmanifest" />
+    <link rel="manifest" href="../img/site.webmanifest" />
     <title>Controle</title>
-    <link rel="stylesheet" href="./controle.css">
+    <link rel="stylesheet" href="../style/controle.css">
 </head>
 
 <body>
     <div class="container-all">
         <div class="score">
             <div style="width: 100%; display: flex; flex-direction: col; justify-content: center;">
-                <iframe width="650px" height="200px" src="./indexV.html" frameborder="0"></iframe>
+                <iframe width="650px" height="200px" src="../indexV.html" frameborder="0"></iframe>
             </div>
             <h1>Gestion des scores</h1>
             <div class="container-scores">
@@ -26,19 +26,19 @@
                     <h3>Points</h3>
                     <div class="row">
                         <div class="square" onclick="changerScore('vienne', 1)">
-                            <img src="./img/vienne.png" alt="">
+                            <img src="../img/vienne.png" alt="">
                             <p>+1</p>
                         </div>
                         <div class="square" onclick="changerScore('vienne', -1)">
-                            <img src="./img/vienne.png" alt="">
+                            <img src="../img/vienne.png" alt="">
                             <p>-1</p>
                         </div>
                         <div class="square" onclick="changerScore('visiteurs', 1)">
-                            <img class="visiteurs" src="./img/nantes.png" alt="">
+                            <img class="visiteurs" src="../img/nantes.png" alt="">
                             <p>+1</p>
                         </div>
                         <div class="square" onclick="changerScore('visiteurs', -1)">
-                            <img class="visiteurs" src="./img/nantes.png" alt="">
+                            <img class="visiteurs" src="../img/nantes.png" alt="">
                             <p>-1</p>
                         </div>
                     </div>
@@ -51,19 +51,19 @@
                     <h3>Sets</h3>
                     <div class="row">
                         <div class="square" onclick="changerSet('vienne', 1)">
-                            <img src="./img/vienne.png" alt="">
+                            <img src="../img/vienne.png" alt="">
                             <p>+1</p>
                         </div>
                         <div class="square" onclick="changerSet('vienne', -1)">
-                            <img src="./img/vienne.png" alt="">
+                            <img src="../img/vienne.png" alt="">
                             <p>-1</p>
                         </div>
                         <div class="square" onclick="changerSet('visiteurs', 1)">
-                            <img class="visiteurs" src="./img/nantes.png" alt="">
+                            <img class="visiteurs" src="../img/nantes.png" alt="">
                             <p>+1</p>
                         </div>
                         <div class="square" onclick="changerSet('visiteurs', -1)">
-                            <img class="visiteurs" src="./img/nantes.png" alt="">
+                            <img class="visiteurs" src="../img/nantes.png" alt="">
                             <p>-1</p>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
         </div>
     </div>
 </body>
-<script src="./config.js" type="module"></script>
-<script src="./controle.js" type="module"></script>
+<script src="../src/config.js" type="module"></script>
+<script src="../src/controle.js" type="module"></script>
 
 </html>

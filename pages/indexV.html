@@ -3,26 +3,30 @@
 <head>
     <title>Affichage des Scores</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="./globals.css" />
-    <link rel="stylesheet" href="./styleV.css" />
+    <link rel="stylesheet" href="../style/globals.css" />
+    <link rel="stylesheet" href="../style/styleV.css" />
 </head>
 <body>
 <div class="grid">
     <div class="sets-label">SETS</div>
     <div class="score-label">SCORE</div>
-    <div class="vienne-label">
-        <img src="./img/vienne.png" alt="VBV logo">
+    <div class="vienne-label row">
+        <div class="logo">
+            <img src="../img/vienne.png" alt="VBV logo">
+        </div>
         VIENNE
     </div>
-    <div class="visiteurs-label">
-        <img id="image-r" src="./img/nantes.png" alt="Visiteurs logo">
+    <div class="visiteurs-label row">
+        <div class="logo">
+            <img id="image-r" src="../img/nantes.png" alt="Visiteurs logo">
+        </div>
         <span id="team-r-name">NANTES</span>
     </div>
     <div class="vienne-sets" id="set-l-num">1</div>
     <div class="visiteurs-sets" id="set-r-num">0</div>
     <div class="vienne-score" id="score-l-num">20</div>
     <div class="visiteurs-score" id="score-r-num">24</div>
-    <div class="ffvb-logo"><img src="./img/big-ligue.png" alt="FFVB Elite logo"></div>
+    <div class="ffvb-logo"><img src="../img/big-ligue.png" alt="FFVB Elite logo"></div>
     <div class="balle" id="balle-match">BALLE DE MATCH</div>
     <div class="balle" id="balle-set">BALLE DE SET</div>
 </div>
@@ -30,7 +34,7 @@
 <script type="module">
     import config from './config.js';
 
-    fetch(`${config.host}/data.json?timestamp=${Date.now()}`)
+    fetch(`${config.host}/../data/data.json?timestamp=${Date.now()}`)
         .then(response => response.json())
         .then(data => {
             document.getElementById('score-l-num').textContent = data.vienne.score;
@@ -47,7 +51,7 @@
 
     ws.onmessage = async (event) => {
         console.log('Message received:', event.data);
-        fetch(`${config.host}/data.json?timestamp=${Date.now()}`)
+        fetch(`${config.host}/../data/data.json?timestamp=${Date.now()}`)
             .then(response => response.json())
             .then(data => {
                 document.getElementById('score-l-num').textContent = data.vienne.score;

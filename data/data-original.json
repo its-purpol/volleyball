@@ -7,7 +7,7 @@
     "score": 0,
     "set": 0,
     "nom": "VIENNE",
-    "embleme": "/img/vienne.png"
+    "embleme": "../img/vienne.png"
   },
   "balle": {
     "set": "none",
